@@ -32,7 +32,7 @@ With Judgee, you control the type of feedback you get. For every three people yo
 Ready to get started?
 
 
-##Pictures of Judgee Web App
+## Pictures of Judgee Web App
 
 At every login, the user is prompted with a mood survey.
 ![mood-survey](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/mood-survey.png)
