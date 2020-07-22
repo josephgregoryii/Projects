@@ -1,11 +1,11 @@
 # Judgee 
+## Hosted on AWS
 The web app can be accessible at http://judgeeapp.com. Account creation is needed.
 
 For display purposes, anyone can view at TBD
 
 V1:
 - Python driven web application
-
 V2:
 - LAMP stack
 
