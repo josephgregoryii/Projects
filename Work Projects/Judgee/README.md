@@ -14,7 +14,7 @@ This project is for a doctoral student at the University of Oregon for their the
 The concept of the studies is as follows:
 
 
-You can’t judge a book by its cover. Or can you?
+*You can’t judge a book by its cover. Or can you?
 
 
 Actually, we judge people all the time. In fact, we’re pretty good at it. As a species, we may have evolved to be particularly adept at judging others. Think about it. It’s adaptive to make snap judgments about whether or not a stranger is friendly or dangerous, happy or sad, hot or not. These judgments inform our future behavior. They help us decide whether to approach or avoid someone new. They help us respond to a friend’s emotional needs. They help us decide whether a new acquaintance is boyfriend or girlfriend material.
@@ -29,7 +29,7 @@ We’ve created a platform where you judge others and they judge you. We encoura
 
 With Judgee, you control the type of feedback you get. For every three people you judge, you’ll earn one credit. Trade in these credits for feedback about you. The cost of feedback might be different for different trait words. For example, it might only cost 1 credit to see if someone else thinks you are reliable, but 2 credits to see if someone else thinks you are attractive. You decide how to spend your credits.
 
-Ready to get started?
+Ready to get started?*
 
 
 ## Pictures of Judgee Web App
