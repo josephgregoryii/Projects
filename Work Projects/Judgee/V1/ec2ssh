@@ -1,0 +1,1 @@
+ssh -i U69g0321j_o.pem ubuntu@ec2-54-70-103-93.us-west-2.compute.amazonaws.com

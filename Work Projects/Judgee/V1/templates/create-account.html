@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Judgee - Create Account</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+<div class="container">
+    <div class="row justify-content-center" style="padding-top: 50px;">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-2 d-none d-lg-block"></div>
+                        <div class="col-lg-8">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Judgee</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                </div>
+                                {% if error %}
+                                <p class="text-danger text-center"><strong>ERROR: </strong>{{ error }}</p>
+                                {% endif %}
+                                <form class="user" method="post" id="createAccount-form" action="{{ url_for('createAccount') }}" enctype="multipart/form-data">
+                                    <div class="form-group row"></div>
+                                    <div class="form-group">
+                                        <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input name="passwd" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input name="repasswd" type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password" required>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="text-center text-primary">Upload Photo</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01" name="photo">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+
+
+                                    <!--1 text box for full_name-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Full Name ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="full_name" type="text" class="form-control" placeholder="Full Name" required>
+                                                            <small  class="text-muted">
+                                                                Please input your full-name in above box.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-file-signature fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2 date picker for birth date-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Birthday ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <div class="text-center">
+                                                                <input class="form-control" name="birthdate" type="date" id="birthdate" value="2001-01-01" min="1900-01-01" max="2020-01-01" required>
+                                                                <small class="text-muted">
+                                                                    Please input your birthday in above box.
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-birthday-cake fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--3 number box for height-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Height ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="height" type="number" class="form-control">
+                                                            <small class="text-muted">
+                                                                Unite is Inches.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <span>Inch</span>
+                                                        <i class="fas fa-question fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--4 number box for weight-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Weight ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="weight" type="number" class="form-control" required >
+                                                            <small class="text-muted">
+                                                                Unite is Pounds.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <span>lb</span>
+                                                        <i class="fas fa-weight fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--5 number box for annual_income-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Annual Income ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="annual_income" type="number" class="form-control" required >
+                                                            <small class="text-muted">
+                                                                Unite is Dollars.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <span>$</span>
+                                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--4 number box for parental_income-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Parental Annual Income ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="parental_income" type="number" class="form-control" required >
+                                                            <small class="text-muted">
+                                                                Unite is Dollars.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <span>$</span>
+                                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--5 number box for num_children-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Number of children ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="num_children" type="number" class="form-control" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-baby fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--6 number box for num_partners-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Lifetime number of sexual partners ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="num_partners" type="number" class="form-control" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-handshake fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <div class="text- font-weight-bold text-success text-uppercase mb-1 text-center">25% Completed !</div>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <!--7 number box for drinks_per_week-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">weekly number of drinks ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="drinks_per_week" type="number" class="form-control" required>
+                                                            <small class="text-muted">
+                                                                Average number of alcoholic drinks per week.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-glass-martini-alt fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--8 number box for weed_per_week-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Weekly marijuana consumption ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <input name="weed_per_week" type="number" class="form-control" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-cannabis fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--9 radio button for dieting_status-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Are you currently Dieting ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-primary active">
+                                                                    <input type="radio" name="dieting_status" id="dieting_status_radio_yes" value="1" autocomplete="off" checked required> Yes
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="dieting_status" id="dieting_status_radio_no" value="0" autocomplete="off" required> No
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="dieting_status" id="dieting_status_radio_unknown" value="2" autocomplete="off" required> Prefer Not To Say
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-question fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--10 radio button for safe_sex-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Do you practice Safe Sex ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-primary active">
+                                                                    <input type="radio" name="safe_sex" id="safe_sex_radio_yes" value="1" autocomplete="off" checked required> Yes
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="safe_sex" id="safe_sex_radio_no" value="0" autocomplete="off" required> No
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="safe_sex" id="safe_sex_radio_unknown" value="2" autocomplete="off" required> Prefer Not To Say
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-genderless fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--11 radio button for smoking_status-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Do you Smoke ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-primary active">
+                                                                    <input type="radio" name="smoking_status" value="0" autocomplete="off" checked required> No
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="smoking_status" value="1" autocomplete="off" required> Occasionally
+                                                                </label>
+
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="smoking_status" value="2" autocomplete="off" required> Sometimes
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="smoking_status" value="3" autocomplete="off" required> Often
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-genderless fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--11 dropdown for race-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Race</div>
+                                                            <p></p>
+                                                            <div class="form-group">
+                                                                <select class="form-control" name="race">
+                                                                    <option>American Indian or Alaska Native</option>
+                                                                    <option>Asian</option>
+                                                                    <option>Black or African American</option>
+                                                                    <option>Hispanic or Latino</option>
+                                                                    <option>Native Hawaiian or Other Pacific Islander</option>
+                                                                    <option>White</option>
+                                                                    <option>Other</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--12 dropdown for ethnicity-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Ethnicity</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="ethnicity">
+                                                                <option>American Indian or Alaska Native</option>
+                                                                <option>Asian</option>
+                                                                <option>Black or African American</option>
+                                                                <option>Hispanic or Latino</option>
+                                                                <option>Native Hawaiian or Other Pacific Islander</option>
+                                                                <option>White</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <div class="text- font-weight-bold text-success text-uppercase mb-1 text-center">50% Completed !</div>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <!--13 dropdown for sex-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Sex</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="sex">
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-venus-mars fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--14 dropdown gender-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Gender</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="gender">
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-venus-mars fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--15 dropdown orientation-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Sexual Orientation</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="orientation">
+                                                                <option>Heterosexual</option>
+                                                                <option>Bisexual</option>
+                                                                <option>Homosexual</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-question fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--16 dropdown for marital_status-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Marital status</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="marital_status">
+                                                                <option>Single</option>
+                                                                <option>Married</option>
+                                                                <option>Divorced</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-hand-holding-heart fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--17 dropdown for education_level-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Education Level</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="education_level">
+                                                                <option>High school degree </option>
+                                                                <option>Associate's degree</option>
+                                                                <option>Bachelor's degree</option>
+                                                                <option>Master's degree</option>
+                                                                <option>Doctoral degree</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-school fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--18 dropdown for employment_status-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Employment status</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="employment_status">
+                                                                <option>Employed</option>
+                                                                <option>Unemployed</option>
+                                                                <option>Searching</option>
+                                                                <option>Student</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-building fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--19 dropdown employment_field-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Employment Field</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="employment_field">
+                                                                <option>Agriculture</option>
+                                                                <option>Artist/Performer</option>
+                                                                <option>Business</option>
+                                                                <option>Communications</option>
+                                                                <option>Computer Science</option>
+                                                                <option>Culinary/Food Services</option>
+                                                                <option>Education</option>
+                                                                <option>Engineering</option>
+                                                                <option>Government</option>
+                                                                <option>Homemaker</option>
+                                                                <option>Legal Profession</option>
+                                                                <option>Medical/Health</option>
+                                                                <option>Military</option>
+                                                                <option>Natural Science</option>
+                                                                <option>Not Employed</option>
+                                                                <option>Physical Sciences</option>
+                                                                <option>Religious Vocation	</option>
+                                                                <option>Research</option>
+                                                                <option>Retired</option>
+                                                                <option>Social Science	</option>
+                                                                <option>Student</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-building fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <div class="text- font-weight-bold text-success text-uppercase mb-1 text-center">75% Completed !</div>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <!--22 dropdown ideology-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Ideology</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="ideology">
+                                                                <option>Liberal</option>
+                                                                <option>Conservative</option>
+                                                                <option>Libertarian</option>
+                                                                <option>Anarchist</option>
+                                                                <option>Socialist</option>
+                                                                <option>Communist</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-question fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--24 dropdown for substance_use-->
+                                    <hr>
+                                    <div class="col-xl-12 col-md-6 mb-4 text-center mx-auto">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text- font-weight-bold text-primary text-uppercase mb-1">Do you use any other illicit Substances ?</div>
+                                                        <p></p>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="substance_use">
+                                                                <option>Yes</option>
+                                                                <option>No</option>
+                                                                <option>Prefer Not To Say</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-question fa-2x text-gray-300"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+                                    <div class="text- font-weight-bold text-success text-uppercase mb-1 text-center">100% Completed !</div>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <hr>
+                                    <button type="submit" class="btn-primary btn-user btn-block theTerget hideTarget">
+                                        Register Account
+                                    </button>
+
+                                </form>
+                                <hr>
+                                {% if error %}
+                                <p class="text-danger text-center"><strong>ERROR: </strong>{{ error }}</p>
+                                {% endif %}
+                                <div class="text-center">
+                                    <a class="small" href="{{ url_for('login') }}">Already have an account? Login!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="../static/js/sb-admin-2.min.js"></script>
+
+
+</body>
+
+</html>

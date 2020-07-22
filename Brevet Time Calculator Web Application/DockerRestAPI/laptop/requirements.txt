@@ -1,0 +1,8 @@
+Flask==0.12
+flask-restful==0.3.5
+arrow
+pymongo
+nose
+pep8
+autopep8
+config

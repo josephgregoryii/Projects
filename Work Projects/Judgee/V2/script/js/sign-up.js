@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#sign-up-content").load("create-account.html");});

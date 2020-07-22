@@ -1,0 +1,9 @@
+use judgee;
+
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (1, "smart", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (2, "creative", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (3, "attractive", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (4, "dependable", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (5, "social", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (6, "insecure", "primary");
+INSERT INTO Traits (trait_id,trait_name,trait_group) VALUES (7, "cooperative", "primary");
