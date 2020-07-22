@@ -4,10 +4,9 @@ The web app can be accessible at http://judgeeapp.com. Account creation is neede
 
 For display purposes, anyone can view at TBD
 
-V1:
-- Python driven web application
-V2:
-- LAMP stack
+V1 - Python Driven Web Application
+
+V2 - LAMP Stack
 
 ### Usage
 
