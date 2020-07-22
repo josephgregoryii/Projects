@@ -28,7 +28,7 @@
 ************************************************************
 Author: Joseph Gregory
 
-Email: joeg@uoregon.edu
+Email: josephagregoryii@gmail.com
 
 ## build
 Inside the DockerRestAPI directory, use command:
