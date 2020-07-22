@@ -1,5 +1,5 @@
 # Judgee 
-The web app can be accessible at https://judgeeapp.com. Account creation is needed.
+The web app can be accessible at http://judgeeapp.com. Account creation is needed.
 
 For display purposes, anyone can view at TBD
 
