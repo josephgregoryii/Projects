@@ -46,5 +46,8 @@ After a number of ratings, a user is then rewarded with a credit which they can 
 
 After purchasing feedback, the user can view their feedback in the feedback tab.
 ![feedback-table](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/feedback-table.png)
+
+The feedback chart shows the average rating other user's have rated on the logged in user (blue) and the population average (red)
+for that given trait
 ![feedback-chart](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/feedback-chart.png)
 
