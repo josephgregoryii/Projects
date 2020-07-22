@@ -32,4 +32,19 @@ With Judgee, you control the type of feedback you get. For every three people yo
 Ready to get started?
 
 
+##Pictures of Judgee Web App
+
+At every login, the user is prompted with a mood survey.
+![mood-survey](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/mood-survey.png)
+
+Once the mood survey has been answered, the user can proceed to the "Judgee" tab to rate other users based off
+a random trait and random user profile picture.
+![rating-system](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/rating-system.png)
+
+After a number of ratings, a user is then rewarded with a credit which they can use in the Credit Bank.
+![credit-bank](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/credit-bank.png)
+
+After purchasing feedback, the user can view their feedback in the feedback tab.
+![feedback-table](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/feedback-table.png)
+![feedback-chart](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/feedback-chart.png)
 
