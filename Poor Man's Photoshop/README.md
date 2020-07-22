@@ -16,8 +16,8 @@ $ ./proj3G input.file output.file
 ```
 
 Below is the sample input and output that the program produces.
-![input](https://bitbucket.org/joegroe/330-c-c-and-unix/raw/327fcde10a0ef935e024324a43972036b083e327/img/input.png)
+![input](https://github.com/josephgregoryii/Projects/blob/master/Poor%20Man's%20Photoshop/img/input.png)
 
-![output](https://bitbucket.org/joegroe/330-c-c-and-unix/raw/327fcde10a0ef935e024324a43972036b083e327/img/output.png)
+![output](https://github.com/josephgregoryii/Projects/blob/master/Poor%20Man's%20Photoshop/img/output.png)
 
 
