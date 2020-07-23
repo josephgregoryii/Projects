@@ -8,7 +8,7 @@ V1 - Python Driven Web Application
 
 V2 - LAMP Stack
 
-### Usage
+### About Judgee
 
 This project is for a doctoral student at the University of Oregon for their thesis study.
 The concept of the studies is as follows:
@@ -32,7 +32,7 @@ The concept of the studies is as follows:
 *Ready to get started?*
 
 
-## Pictures of Judgee Web App
+## Pictures of Judgee Web App (V2)
 
 At every login, the user is prompted with a mood survey.
 ![mood-survey](https://github.com/josephgregoryii/Projects/blob/master/Work%20Projects/Judgee/img/mood-survey.png)
