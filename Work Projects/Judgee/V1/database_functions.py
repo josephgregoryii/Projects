@@ -19,10 +19,10 @@ def connectDatabase():
     # try to connect to cloud sql server
     try:
         mydb = mysql.connector.connect(
-            host = "judgeedatabase.cj7tduuicemv.us-west-2.rds.amazonaws.com",
+            host = "HOST",
             user = "admin",
-            passwd = "I8theturnips!",
-            database = "judgee"
+            passwd = "PASSWORD",
+            database = "DATABASE"
             )
         #if mydb.is_connected():
             #print('connection established.')
