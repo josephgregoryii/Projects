@@ -1,0 +1,15 @@
+vector<Triangle> t = GetTriangles();
+AllocateScreen();
+for (int i = 0; i < 4; i++)
+{
+    int f = 250*i;
+    InitializeScreen();
+    Camera c = GetCamera(f,1000);
+    TransformTrianglesToDeviceSpace(); //involves setting up and applying
+                                       //matricies
+                                       //if modify vector<Triangle>t,
+                                       //undo later
+
+    RenderTriangles();
+    SaveImage();
+}
