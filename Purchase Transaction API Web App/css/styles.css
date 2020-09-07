@@ -1,0 +1,133 @@
+body {
+  background-color: #37444C;
+}
+
+*{
+  font-family: "Helvetica Neue";
+  font-color: #575757;
+  box-sizing: border-box;
+}
+p{
+  color: #ddd;
+}
+span{
+  color:#ddd;
+  font-size: 20px;
+}
+
+div.div_1 {
+  height: 400px;
+  width: 50%;
+  overflow-y: auto;
+  margin-right: 5px;
+  float:left;
+}
+.hidden {
+  display:none;
+}
+div.div_2{
+  background:#6a777f;
+  border-radius: 25px;
+  color: #ddd;
+  height:400px;
+  width:30%;
+  float: left;
+  padding: 30px;
+  border: 1px solid #575757;
+}
+div.info_div{
+  height:30px;
+  width: 50%;
+  margin-bottom: 7px;
+}
+#loginContent{
+  color:#ddd;
+  
+}
+#date, #merchant, #amount{
+  float:right;
+  border-radius: 25px;
+  font-size:14px;
+  padding: 1px;
+  width: 50%;
+}
+
+#sel{
+  height: 30px;
+  width: 40%;
+  font-size:16px;
+  margin-left: 10px;
+}
+#loginMain{
+  width: 25%;
+}
+#partnerName, #partnerPassword, #partnerUserSecret, #partnerUserID{
+  background: lightgray;
+  border-radius: 25px;
+  border: 1px solid #575757;
+  height:30px;
+  width: 50%;
+  font-size: 16px;
+  float: right;
+
+}
+#search_inp{
+  margin-bottom: 2px;
+  border: 1px solid #575757;
+  height: 30px;
+  width: 40%;
+  font-size: 16px;
+  border-radius: 25px;
+}
+#search {
+  width:50%;
+}
+#t_h1 {
+  color:#ddd;
+}
+#login_btn{
+  border-radius: 25px;
+  font-size: 16px;
+  
+}
+#transaction_btn {
+  border-radius: 25px;
+  font-size: 14px;
+}
+thead {
+  width: 100%;
+}
+
+#info{
+  height: 50%;
+  overflow-y:scroll;  
+  border-collapse: collapse;
+  border-spacing: 2px;
+  width: 100%;
+  table-layout: fixed;
+
+}
+table {
+  height: 50%;
+  overflow-y:scroll;  
+  border-collapse: collapse;
+  border-spacing: 2px;
+  width: 100%;
+  table-layout: fixed;
+}
+tbody{
+  table-layout: fixed;
+  height: 500px;
+  width: 50%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #575757;
+  width: 30%;
+  word-wrap:break-word;
+}
+tr:nth-child(even){background-color: #ddd}
+tr:nth-child(odd){background-color: white}
+

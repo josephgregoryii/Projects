@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expensify Take-Home Challenge</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body onload="checkLogin();">
+    <!--img src="https://use.expensify.com/assets/logo/expensify-logo_reversed.png" alt="expensify" width="330" height="100";--><br></br>
+    <span id="status">Welcome! Please login.</span>
+    <div id="loginMain">
+        <div id="loginContent">
+            <form id = "login_form" >
+                <p>Partner Name: <input         id="partnerName"        placeholder="Partner Name"                                                  required></p>
+                <p>Partner Password: <input     id="partnerPassword"    placeholder="Partner Password"                                              required></p>
+                <p>Partner User ID: <input      id="partnerUserID"      placeholder="Partner User ID"       type="email"                            required></p>
+                <p>Partner User Secret: <input  id="partnerUserSecret"  placeholder="Partner User Secret"                                           required></p>
+                <p><input                       id="login_btn"          value="login"                       type="submit"onclick="loginFunction()"  disabled></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="transactionTable">
+        <h1 id="t_h1"></h1>
+        <h1 id ='search'></h1>
+        <div class="hidden" id="info_div">
+            <table>
+                <thead id = "transactionInfo"></thead>
+            </table>
+        </div>
+        <div class="div_1">
+            <table>
+                <thead>
+                </thead>
+                <tbody id="transactionTableBody">
+                    <!-- dynamically inserted via javascript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="hidden" id="transactionForm">
+       <h1>Create a Transaction</h1> 
+       <span id="create_status"></span>
+       <table>
+        <form class="form" id = "transaction_form" >
+            <p>Date of transaction: <input  id="date"               type="date"     min="1950-01-01"    max="2021-01-01"        required></p>
+            <p>Amount: <input               id="amount"             type="number"   placeholder="(100 = $1.00), $0 default"     required></p>
+            <p>Merchant: <input             id="merchant"           type="text"     placeholder="Burger King, Expensify, etc."  required></p>
+            <p><input                       id="transaction_btn"    type="submit"   value="Create" onclick="createTransaction();"></p>
+        </form>
+        </table>
+    </div>
+</body>
+
+</html>
