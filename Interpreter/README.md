@@ -1,4 +1,4 @@
-# for a lazy (call by name) language
+# Interpreter for a lazy (call by name) language
 
 ### Syntax for language:
 ```sml
